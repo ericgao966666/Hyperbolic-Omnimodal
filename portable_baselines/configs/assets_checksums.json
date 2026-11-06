@@ -1,0 +1,9 @@
+{
+  "clip/EVA01_CLIP_g_14_psz14_s11B.pt": "fe1d3a90bb88c3816a8c708b8a16c11c93cc323ec9e7bc7a0e8b979449fa9785",
+  "beats/BEATs_iter3_plus_AS2M.pt": "d43cbfad4d7b56381c061d7a24774f908d4d94c72961f6eb1d9090ff18cd8d34",
+  "bert/bert-base-uncased/config.json": "7160e1553ad2ca51d8c1cb066be533db31826e12d173824c1bb0cb1a4f187d20",
+  "bert/bert-base-uncased/vocab.txt": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3",
+  "bert/bert-base-uncased/model.safetensors": "68d45e234eb4a928074dfd868cead0219ab85354cc53d20e772753c6bb9169d3",
+  "bert/bert-base-uncased/tokenizer.json": "ce64fce797c24f68df90b40a3f74f579b336a493db14bd583fd520ea0d8c9a98",
+  "bert/bert-base-uncased/tokenizer_config.json": "a025160ef0431f1a392f6f050c1310f4c5d9fb6f275932dbccba73c4d214bf10"
+}

@@ -1,0 +1,29 @@
+{
+  "dataset": "train",
+  "media_dataset": "vast",
+  "shards": [
+    "manifests/train/part_000.json.gz",
+    "manifests/train/part_001.json.gz",
+    "manifests/train/part_002.json.gz",
+    "manifests/train/part_003.json.gz",
+    "manifests/train/part_004.json.gz",
+    "manifests/train/part_005.json.gz",
+    "manifests/train/part_006.json.gz",
+    "manifests/train/part_007.json.gz",
+    "manifests/train/part_008.json.gz",
+    "manifests/train/part_009.json.gz",
+    "manifests/train/part_010.json.gz",
+    "manifests/train/part_011.json.gz",
+    "manifests/train/part_012.json.gz",
+    "manifests/train/part_013.json.gz",
+    "manifests/train/part_014.json.gz",
+    "manifests/train/part_015.json.gz",
+    "manifests/train/part_016.json.gz",
+    "manifests/train/part_017.json.gz",
+    "manifests/train/part_018.json.gz",
+    "manifests/train/part_019.json.gz",
+    "manifests/train/part_020.json.gz"
+  ],
+  "video_count": 82608,
+  "query_count": 82608
+}

@@ -1,0 +1,590 @@
+{
+  "base_commit": "8457b8e615837203f48d3c11957ae8777811a827",
+  "sources": {
+    "vendor/code/model/__init__.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/code/model/__init__.py",
+      "sha256_before_portability_changes": "ae0ef00dbd47842cf237e2e9284e441d752587a97cd306fbb0f256db8dcb6c7c"
+    },
+    "vendor/code/model/audio_encoders/ast/ast.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/code/model/audio_encoders/ast/ast.py",
+      "sha256_before_portability_changes": "ea767c294ca9a061c508e779104e7868381e72d2d276d33e4da9ca56be1f0699"
+    },
+    "vendor/code/model/audio_encoders/beats/beats.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/code/model/audio_encoders/beats/beats.py",
+      "sha256_before_portability_changes": "579e1e253e9ff489c687b4a46589dfaae52b30394a4a35ec10adc61f420482ce"
+    },
+    "vendor/code/model/general_module.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/code/model/general_module.py",
+      "sha256_before_portability_changes": "66a0c24de971999773d1a283cde5fcb9ac9cebd2bd143083e314674260aa74ac"
+    },
+    "vendor/code/model/hyperbolic_spectral_pmrl.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/code/model/hyperbolic_spectral_pmrl.py",
+      "sha256_before_portability_changes": "5111edde7a568a73a53cf2ff873ce9bc98cf50aede6b819892d4651c88975492"
+    },
+    "vendor/code/model/lorentz_omnimodal.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/code/model/lorentz_omnimodal.py",
+      "sha256_before_portability_changes": "c1da4d36edc82aa579fe853a9851adbbed12dc5f28895d55e9e934e24425b5eb"
+    },
+    "vendor/code/model/pmrl.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/code/model/pmrl.py",
+      "sha256_before_portability_changes": "19db8d5e05b59249783eb5a1fb343f229f07f29828d5581b4ecca71edce17442"
+    },
+    "vendor/code/model/subset_hierarchy.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/code/model/subset_hierarchy.py",
+      "sha256_before_portability_changes": "15b4562f2465fa7d1281e4e4cfcfd424cf5829e22e8816fb1d2e81358b231dd1"
+    },
+    "vendor/code/model/svd_proxy.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/code/model/svd_proxy.py",
+      "sha256_before_portability_changes": "36f854b809cb6cae75d096e0387e35dd3dbd2e0b3af2a02581df73cbe4488138"
+    },
+    "vendor/code/model/text_encoders/bert/bert.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/code/model/text_encoders/bert/bert.py",
+      "sha256_before_portability_changes": "dff4e57d8c942789373aa1fa4d91797bd22dfe0a9c538c04cc811cf7962c138f"
+    },
+    "vendor/code/model/vision_encoders/clip/clip.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/code/model/vision_encoders/clip/clip.py",
+      "sha256_before_portability_changes": "8773561cb96fb79f09ed27f2458420c860fa97028cd5caed2178c5fd94836d96"
+    },
+    "vendor/code/model/vision_encoders/clip/clip_tokenizer.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/code/model/vision_encoders/clip/clip_tokenizer.py",
+      "sha256_before_portability_changes": "08eee694b3877d272b6af13d654acdd5afb835e7933d810845a753e3c0edf347"
+    },
+    "vendor/code/model/vision_encoders/evaclip/__init__.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/code/model/vision_encoders/evaclip/__init__.py",
+      "sha256_before_portability_changes": "bb62a5a31381fe0a1d5fbbb2fefffc663f079e6e1a25188bce85595dfa597120"
+    },
+    "vendor/code/model/vision_encoders/evaclip/bpe_simple_vocab_16e6.txt.gz": {
+      "source": "code/outputs/lowdim_retrieval_20261021/code/model/vision_encoders/evaclip/bpe_simple_vocab_16e6.txt.gz",
+      "sha256_before_portability_changes": "924691ac288e54409236115652ad4aa250f48203de50a9e4722a6ecd48d6804a"
+    },
+    "vendor/code/model/vision_encoders/evaclip/constants.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/code/model/vision_encoders/evaclip/constants.py",
+      "sha256_before_portability_changes": "4289fac298908e2fb814ff84b4594ff49094a7eab074fed1b2ca6429339e923b"
+    },
+    "vendor/code/model/vision_encoders/evaclip/eva_vit_model.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/code/model/vision_encoders/evaclip/eva_vit_model.py",
+      "sha256_before_portability_changes": "1a74700f5647272d2b0e56a32be5b44910defdea9cb75bb8e2df58282ec83d87"
+    },
+    "vendor/code/model/vision_encoders/evaclip/factory.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/code/model/vision_encoders/evaclip/factory.py",
+      "sha256_before_portability_changes": "ec63091b770131139b98d6d55e820d55d56b47f8b2ccdbc8b08a388ce88115c7"
+    },
+    "vendor/code/model/vision_encoders/evaclip/hf_configs.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/code/model/vision_encoders/evaclip/hf_configs.py",
+      "sha256_before_portability_changes": "7c295b99559e903187c74df5a3bcee2f5e23383e03911abd085c071f9f7d20c1"
+    },
+    "vendor/code/model/vision_encoders/evaclip/hf_model.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/code/model/vision_encoders/evaclip/hf_model.py",
+      "sha256_before_portability_changes": "cd811a4655ed7040ef6b62e30e1b5afa42444e95c0e93e0953075992d5987f18"
+    },
+    "vendor/code/model/vision_encoders/evaclip/loss.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/code/model/vision_encoders/evaclip/loss.py",
+      "sha256_before_portability_changes": "613153f4eafd82a355c591b69841f2dd49b3630ea48f8a0fdf076881fbc0dc47"
+    },
+    "vendor/code/model/vision_encoders/evaclip/model.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/code/model/vision_encoders/evaclip/model.py",
+      "sha256_before_portability_changes": "849d11c6f5530ca8d3b259432fc238a8a0c02e172fe165141e1c4cabd61ddce3"
+    },
+    "vendor/code/model/vision_encoders/evaclip/model_configs/EVA01-CLIP-B-16.json": {
+      "source": "code/outputs/lowdim_retrieval_20261021/code/model/vision_encoders/evaclip/model_configs/EVA01-CLIP-B-16.json",
+      "sha256_before_portability_changes": "5578cf993b759812aaab4d74f491d57f6929e35ece4cc4b9b2c25aefb39a8f1a"
+    },
+    "vendor/code/model/vision_encoders/evaclip/model_configs/EVA01-CLIP-g-14-plus.json": {
+      "source": "code/outputs/lowdim_retrieval_20261021/code/model/vision_encoders/evaclip/model_configs/EVA01-CLIP-g-14-plus.json",
+      "sha256_before_portability_changes": "d5a01d9855a608efc8ddff1a8c0607aaad0ca171cc826764a8b1c23340b6620f"
+    },
+    "vendor/code/model/vision_encoders/evaclip/model_configs/EVA01-CLIP-g-14.json": {
+      "source": "code/outputs/lowdim_retrieval_20261021/code/model/vision_encoders/evaclip/model_configs/EVA01-CLIP-g-14.json",
+      "sha256_before_portability_changes": "86b1b673220494603cf13435c81b63e458a7325eafe8b7253ec7b76069bf2dd3"
+    },
+    "vendor/code/model/vision_encoders/evaclip/model_configs/EVA02-CLIP-B-16.json": {
+      "source": "code/outputs/lowdim_retrieval_20261021/code/model/vision_encoders/evaclip/model_configs/EVA02-CLIP-B-16.json",
+      "sha256_before_portability_changes": "34d8b8b4ed7ed08b797f7a69b04088be016a785579e6775bd142e3103d60bbc5"
+    },
+    "vendor/code/model/vision_encoders/evaclip/model_configs/EVA02-CLIP-L-14-336.json": {
+      "source": "code/outputs/lowdim_retrieval_20261021/code/model/vision_encoders/evaclip/model_configs/EVA02-CLIP-L-14-336.json",
+      "sha256_before_portability_changes": "deb4f3c231f1263c346ad212808f1d08e267414f59d2f9915b7d6153494c44e6"
+    },
+    "vendor/code/model/vision_encoders/evaclip/model_configs/EVA02-CLIP-L-14.json": {
+      "source": "code/outputs/lowdim_retrieval_20261021/code/model/vision_encoders/evaclip/model_configs/EVA02-CLIP-L-14.json",
+      "sha256_before_portability_changes": "af3acdaecc935956f696c826b9e1ae353770908e7f2c96ccc5eb27531f76515a"
+    },
+    "vendor/code/model/vision_encoders/evaclip/model_configs/EVA02-CLIP-bigE-14-plus.json": {
+      "source": "code/outputs/lowdim_retrieval_20261021/code/model/vision_encoders/evaclip/model_configs/EVA02-CLIP-bigE-14-plus.json",
+      "sha256_before_portability_changes": "9b30b750339a8f6e328326449542cf7e5f47b2a22f130b1cf2b288a7d92c5e70"
+    },
+    "vendor/code/model/vision_encoders/evaclip/model_configs/EVA02-CLIP-bigE-14.json": {
+      "source": "code/outputs/lowdim_retrieval_20261021/code/model/vision_encoders/evaclip/model_configs/EVA02-CLIP-bigE-14.json",
+      "sha256_before_portability_changes": "755f0abff9a32091106f71a8b771f19763577681d3d5eafe3ff23db16ff298a2"
+    },
+    "vendor/code/model/vision_encoders/evaclip/modified_resnet.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/code/model/vision_encoders/evaclip/modified_resnet.py",
+      "sha256_before_portability_changes": "cb8a2e7e33849ee81b08906c484aef4f25e38125b2121c13ebe05d4b1b55773e"
+    },
+    "vendor/code/model/vision_encoders/evaclip/openai.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/code/model/vision_encoders/evaclip/openai.py",
+      "sha256_before_portability_changes": "f96a14feff6f6af7625d7ca3ec12f095aeed657b0d7f3953512c1eaadeb999c2"
+    },
+    "vendor/code/model/vision_encoders/evaclip/pretrained.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/code/model/vision_encoders/evaclip/pretrained.py",
+      "sha256_before_portability_changes": "9b1590c7ab7d8ed8c7a6237fee94332404243cf9fb9c3db98de3634a03f6fbf9"
+    },
+    "vendor/code/model/vision_encoders/evaclip/rope.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/code/model/vision_encoders/evaclip/rope.py",
+      "sha256_before_portability_changes": "aa6d1a6459872e5f453d64786ae16bc067c0fd05c8d743e9cec8e9ac61e37a8a"
+    },
+    "vendor/code/model/vision_encoders/evaclip/timm_model.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/code/model/vision_encoders/evaclip/timm_model.py",
+      "sha256_before_portability_changes": "47f11c8a75783209243b599cb1f9a22424d5825f569bb38ec080ce9e199635c9"
+    },
+    "vendor/code/model/vision_encoders/evaclip/tokenizer.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/code/model/vision_encoders/evaclip/tokenizer.py",
+      "sha256_before_portability_changes": "f9eefe3949bc8438d35396e6a8862fdd9b265658cd7648c825ec34905ed62921"
+    },
+    "vendor/code/model/vision_encoders/evaclip/transform.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/code/model/vision_encoders/evaclip/transform.py",
+      "sha256_before_portability_changes": "0c7c60bd1e0791c43c4b9c47bcffb69b21077e7efd7b3ebb95dd1f6ecbbbb785"
+    },
+    "vendor/code/model/vision_encoders/evaclip/transformer.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/code/model/vision_encoders/evaclip/transformer.py",
+      "sha256_before_portability_changes": "76b0b3f1bca45c41abf0137c50b1671d102b982b85d2ad1cd6aa7fa1796ef43d"
+    },
+    "vendor/code/model/vision_encoders/evaclip/utils.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/code/model/vision_encoders/evaclip/utils.py",
+      "sha256_before_portability_changes": "59b827f878fe65f4b580ee7286636a1d6edd432b154e650cfd780a15a1058606"
+    },
+    "vendor/code/model/vision_encoders/swin/swin.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/code/model/vision_encoders/swin/swin.py",
+      "sha256_before_portability_changes": "804e391539cc7d0bd3ffb8f2e734340926d0f300b2f754013e1230370c734069"
+    },
+    "vendor/code/model/vision_encoders/swin/swin_config.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/code/model/vision_encoders/swin/swin_config.py",
+      "sha256_before_portability_changes": "db885fe678bdd8596df3e69f22a6679fa7b336adb47a8c1044f41c2e5ee4ecab"
+    },
+    "vendor/code/model/vision_encoders/videoswin/videoswin.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/code/model/vision_encoders/videoswin/videoswin.py",
+      "sha256_before_portability_changes": "7ec6809a63facc60f8202e293179e2946d95382237876619096f1e43a43189e8"
+    },
+    "vendor/code/utils/__init__.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/code/utils/__init__.py",
+      "sha256_before_portability_changes": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "vendor/code/utils/args.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/code/utils/args.py",
+      "sha256_before_portability_changes": "9cfc8548968e38e1647089452d9819b23911389ad04fae88f023a9e3c79e12a9"
+    },
+    "vendor/code/utils/build_dataloader.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/code/utils/build_dataloader.py",
+      "sha256_before_portability_changes": "a34ce498d30041ea3df2bd33fcad7d3ee8e02732e3ddc0604a77d15a1ac3a146"
+    },
+    "vendor/code/utils/build_model.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/code/utils/build_model.py",
+      "sha256_before_portability_changes": "90f097c040d42e218d5cea2b82a49e34d6a6e26ab0505a8420f3f3d6fa57d9f8"
+    },
+    "vendor/code/utils/build_optimizer.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/code/utils/build_optimizer.py",
+      "sha256_before_portability_changes": "ebef5589239624b100ca985186c76a583687fe6f19239c3c9b36f25175e6ddea"
+    },
+    "vendor/code/utils/distributed.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/code/utils/distributed.py",
+      "sha256_before_portability_changes": "27e3cd93a71c17290d500808c6283217437d640ac26860d92740d87a05e5b324"
+    },
+    "vendor/code/utils/eigen.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/code/utils/eigen.py",
+      "sha256_before_portability_changes": "0e775fb69c6911173f404a4579514b70b7d88d7d97ec65905b17a7cd6b40424f"
+    },
+    "vendor/code/utils/initialize.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/code/utils/initialize.py",
+      "sha256_before_portability_changes": "f96ff227fe0ef9f6df16c5bec1ac8f89bd61a96c24bf47ab7efe9a00c31bf337"
+    },
+    "vendor/code/utils/logger.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/code/utils/logger.py",
+      "sha256_before_portability_changes": "dbba41df6b72056b51cbd4fbd47a09040f5c1f9ca196bb493cedc2ad534d6c50"
+    },
+    "vendor/code/utils/lorentz_spectral.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/code/utils/lorentz_spectral.py",
+      "sha256_before_portability_changes": "7aa8f967c6104e5831e1863fd2a38f3f7e9ee1546967d63499258fb849f2d19d"
+    },
+    "vendor/code/utils/lowdim_geometry.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/code/utils/lowdim_geometry.py",
+      "sha256_before_portability_changes": "5d7e807f7455f8f47d3d97e65d1e1888bc56b3b3fced7875185a63d0cb11a7d1"
+    },
+    "vendor/code/utils/lowdim_parent.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/code/utils/lowdim_parent.py",
+      "sha256_before_portability_changes": "28e0c40105062af30d771f231e987b7d1337c5ba479df1e748158af37eef3574"
+    },
+    "vendor/code/utils/offline_process_data.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/code/utils/offline_process_data.py",
+      "sha256_before_portability_changes": "9ba93854b044065915ac0404f8da65f95955c5068d77f75a9efc4cd6ca1121fd"
+    },
+    "vendor/code/utils/omnimodal_experiments.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/code/utils/omnimodal_experiments.py",
+      "sha256_before_portability_changes": "3f755337b0306812bdabc378ff27c7b8a09a46d0c7ec5ae5402a0f99c0771f12"
+    },
+    "vendor/code/utils/pipeline.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/code/utils/pipeline.py",
+      "sha256_before_portability_changes": "ec3e8095e663bd54e7c88e14d57d8e7e1e4740ed93b6ab25b19bb453179cafdd"
+    },
+    "vendor/code/utils/save.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/code/utils/save.py",
+      "sha256_before_portability_changes": "df667110dcdc58453a32b1bef785a97b3e03656783e1e2961a3a8f288bc89cc7"
+    },
+    "vendor/code/utils/sched.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/code/utils/sched.py",
+      "sha256_before_portability_changes": "6a79cb16d201f0e40f1e21b3fea288ff4bea3b67f1a1c4f86d64bfeb61e0d349"
+    },
+    "vendor/code/utils/subset_hierarchy.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/code/utils/subset_hierarchy.py",
+      "sha256_before_portability_changes": "7b96bc7feae8801bbc276e86607dfd8228ffa5c8f196c6841d1c2593d7056d15"
+    },
+    "vendor/code/utils/subset_mechanisms.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/code/utils/subset_mechanisms.py",
+      "sha256_before_portability_changes": "4771dfd9e2aff6ec43e55afe91f7a99538776e83bc64c3c13d129f0931e36ecc"
+    },
+    "vendor/code/utils/tool.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/code/utils/tool.py",
+      "sha256_before_portability_changes": "ec15753878b6c90866ab04e163da63bc10085d27af27de529553225f29f4aa0c"
+    },
+    "vendor/code/data/IndexAnno.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/code/data/IndexAnno.py",
+      "sha256_before_portability_changes": "231ccc191e0c7516bb97d72c8877bbaedc11c397124aec48a7747207a4849cfd"
+    },
+    "vendor/code/data/IndexSrc.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/code/data/IndexSrc.py",
+      "sha256_before_portability_changes": "fa444c7478ca111bc906fbf960a0d741972375e4d1e6358b7f8657a80227854a"
+    },
+    "vendor/code/data/__init__.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/code/data/__init__.py",
+      "sha256_before_portability_changes": "bf70604aff925d66765763382fd5cf768ce7f7fc60a8c1be0e1bbcc88ea79b55"
+    },
+    "vendor/code/data/audio_mapper.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/code/data/audio_mapper.py",
+      "sha256_before_portability_changes": "2fb8d65e9ab7798d22ea374221f40777433c681b488f39925b2e8964ba2e49e8"
+    },
+    "vendor/code/data/bounded_video.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/code/data/bounded_video.py",
+      "sha256_before_portability_changes": "250a2e04d99f33f4f1562d74e6d46b5d148d01fbe573e2cddaea9f947585ae45"
+    },
+    "vendor/code/data/loader.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/code/data/loader.py",
+      "sha256_before_portability_changes": "120e5aebbdaf1f3d5b2c9b8b1d918414954ae632f8c9c561abcdc469e55187c6"
+    },
+    "vendor/code/data/vision_mapper.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/code/data/vision_mapper.py",
+      "sha256_before_portability_changes": "e7e6f42daf381fd3ac1ea2c03dc0f3da21a904417614e0ca4de623f589fb0f5c"
+    },
+    "vendor/authors/GRAM/LICENSE": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/GRAM/LICENSE",
+      "sha256_before_portability_changes": "026f3bf7e36a05943ff449afbf511e31528f484863d42bc97ade231a98f751cd"
+    },
+    "vendor/authors/GRAM/model/__init__.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/GRAM/model/__init__.py",
+      "sha256_before_portability_changes": "255e3590f30733667b17b755d675423bf703f2f7cb8b98819ed936a83897c3f3"
+    },
+    "vendor/authors/GRAM/model/audio_encoders/ast/ast.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/GRAM/model/audio_encoders/ast/ast.py",
+      "sha256_before_portability_changes": "ea767c294ca9a061c508e779104e7868381e72d2d276d33e4da9ca56be1f0699"
+    },
+    "vendor/authors/GRAM/model/audio_encoders/beats/beats.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/GRAM/model/audio_encoders/beats/beats.py",
+      "sha256_before_portability_changes": "9ca67ac62b2fa4665f1688647752e65a301a1316546c372ff40e6a5584317113"
+    },
+    "vendor/authors/GRAM/model/general_module.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/GRAM/model/general_module.py",
+      "sha256_before_portability_changes": "66a0c24de971999773d1a283cde5fcb9ac9cebd2bd143083e314674260aa74ac"
+    },
+    "vendor/authors/GRAM/model/gram.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/GRAM/model/gram.py",
+      "sha256_before_portability_changes": "912ef02b272292f2e61ebee0f2bdac81f6fde76ded6228c0d7e95f36a8b8810e"
+    },
+    "vendor/authors/GRAM/model/text_encoders/bert/bert.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/GRAM/model/text_encoders/bert/bert.py",
+      "sha256_before_portability_changes": "1304836988ff8a53dedf10c3982093b2263eb29b951bce8946116f6cf12b32ca"
+    },
+    "vendor/authors/GRAM/model/vision_encoders/clip/clip.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/GRAM/model/vision_encoders/clip/clip.py",
+      "sha256_before_portability_changes": "8773561cb96fb79f09ed27f2458420c860fa97028cd5caed2178c5fd94836d96"
+    },
+    "vendor/authors/GRAM/model/vision_encoders/clip/clip_tokenizer.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/GRAM/model/vision_encoders/clip/clip_tokenizer.py",
+      "sha256_before_portability_changes": "08eee694b3877d272b6af13d654acdd5afb835e7933d810845a753e3c0edf347"
+    },
+    "vendor/authors/GRAM/model/vision_encoders/evaclip/__init__.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/GRAM/model/vision_encoders/evaclip/__init__.py",
+      "sha256_before_portability_changes": "bb62a5a31381fe0a1d5fbbb2fefffc663f079e6e1a25188bce85595dfa597120"
+    },
+    "vendor/authors/GRAM/model/vision_encoders/evaclip/bpe_simple_vocab_16e6.txt.gz": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/GRAM/model/vision_encoders/evaclip/bpe_simple_vocab_16e6.txt.gz",
+      "sha256_before_portability_changes": "924691ac288e54409236115652ad4aa250f48203de50a9e4722a6ecd48d6804a"
+    },
+    "vendor/authors/GRAM/model/vision_encoders/evaclip/constants.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/GRAM/model/vision_encoders/evaclip/constants.py",
+      "sha256_before_portability_changes": "4289fac298908e2fb814ff84b4594ff49094a7eab074fed1b2ca6429339e923b"
+    },
+    "vendor/authors/GRAM/model/vision_encoders/evaclip/eva_vit_model.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/GRAM/model/vision_encoders/evaclip/eva_vit_model.py",
+      "sha256_before_portability_changes": "0c4cac1ba23769e93748916c391a347916c3546910f5a0565226f7e1ba2dc490"
+    },
+    "vendor/authors/GRAM/model/vision_encoders/evaclip/factory.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/GRAM/model/vision_encoders/evaclip/factory.py",
+      "sha256_before_portability_changes": "ec63091b770131139b98d6d55e820d55d56b47f8b2ccdbc8b08a388ce88115c7"
+    },
+    "vendor/authors/GRAM/model/vision_encoders/evaclip/hf_configs.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/GRAM/model/vision_encoders/evaclip/hf_configs.py",
+      "sha256_before_portability_changes": "7c295b99559e903187c74df5a3bcee2f5e23383e03911abd085c071f9f7d20c1"
+    },
+    "vendor/authors/GRAM/model/vision_encoders/evaclip/hf_model.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/GRAM/model/vision_encoders/evaclip/hf_model.py",
+      "sha256_before_portability_changes": "cd811a4655ed7040ef6b62e30e1b5afa42444e95c0e93e0953075992d5987f18"
+    },
+    "vendor/authors/GRAM/model/vision_encoders/evaclip/loss.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/GRAM/model/vision_encoders/evaclip/loss.py",
+      "sha256_before_portability_changes": "613153f4eafd82a355c591b69841f2dd49b3630ea48f8a0fdf076881fbc0dc47"
+    },
+    "vendor/authors/GRAM/model/vision_encoders/evaclip/model.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/GRAM/model/vision_encoders/evaclip/model.py",
+      "sha256_before_portability_changes": "849d11c6f5530ca8d3b259432fc238a8a0c02e172fe165141e1c4cabd61ddce3"
+    },
+    "vendor/authors/GRAM/model/vision_encoders/evaclip/model_configs/EVA01-CLIP-B-16.json": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/GRAM/model/vision_encoders/evaclip/model_configs/EVA01-CLIP-B-16.json",
+      "sha256_before_portability_changes": "5578cf993b759812aaab4d74f491d57f6929e35ece4cc4b9b2c25aefb39a8f1a"
+    },
+    "vendor/authors/GRAM/model/vision_encoders/evaclip/model_configs/EVA01-CLIP-g-14-plus.json": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/GRAM/model/vision_encoders/evaclip/model_configs/EVA01-CLIP-g-14-plus.json",
+      "sha256_before_portability_changes": "d5a01d9855a608efc8ddff1a8c0607aaad0ca171cc826764a8b1c23340b6620f"
+    },
+    "vendor/authors/GRAM/model/vision_encoders/evaclip/model_configs/EVA01-CLIP-g-14.json": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/GRAM/model/vision_encoders/evaclip/model_configs/EVA01-CLIP-g-14.json",
+      "sha256_before_portability_changes": "86b1b673220494603cf13435c81b63e458a7325eafe8b7253ec7b76069bf2dd3"
+    },
+    "vendor/authors/GRAM/model/vision_encoders/evaclip/model_configs/EVA02-CLIP-B-16.json": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/GRAM/model/vision_encoders/evaclip/model_configs/EVA02-CLIP-B-16.json",
+      "sha256_before_portability_changes": "34d8b8b4ed7ed08b797f7a69b04088be016a785579e6775bd142e3103d60bbc5"
+    },
+    "vendor/authors/GRAM/model/vision_encoders/evaclip/model_configs/EVA02-CLIP-L-14-336.json": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/GRAM/model/vision_encoders/evaclip/model_configs/EVA02-CLIP-L-14-336.json",
+      "sha256_before_portability_changes": "deb4f3c231f1263c346ad212808f1d08e267414f59d2f9915b7d6153494c44e6"
+    },
+    "vendor/authors/GRAM/model/vision_encoders/evaclip/model_configs/EVA02-CLIP-L-14.json": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/GRAM/model/vision_encoders/evaclip/model_configs/EVA02-CLIP-L-14.json",
+      "sha256_before_portability_changes": "af3acdaecc935956f696c826b9e1ae353770908e7f2c96ccc5eb27531f76515a"
+    },
+    "vendor/authors/GRAM/model/vision_encoders/evaclip/model_configs/EVA02-CLIP-bigE-14-plus.json": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/GRAM/model/vision_encoders/evaclip/model_configs/EVA02-CLIP-bigE-14-plus.json",
+      "sha256_before_portability_changes": "9b30b750339a8f6e328326449542cf7e5f47b2a22f130b1cf2b288a7d92c5e70"
+    },
+    "vendor/authors/GRAM/model/vision_encoders/evaclip/model_configs/EVA02-CLIP-bigE-14.json": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/GRAM/model/vision_encoders/evaclip/model_configs/EVA02-CLIP-bigE-14.json",
+      "sha256_before_portability_changes": "755f0abff9a32091106f71a8b771f19763577681d3d5eafe3ff23db16ff298a2"
+    },
+    "vendor/authors/GRAM/model/vision_encoders/evaclip/modified_resnet.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/GRAM/model/vision_encoders/evaclip/modified_resnet.py",
+      "sha256_before_portability_changes": "cb8a2e7e33849ee81b08906c484aef4f25e38125b2121c13ebe05d4b1b55773e"
+    },
+    "vendor/authors/GRAM/model/vision_encoders/evaclip/openai.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/GRAM/model/vision_encoders/evaclip/openai.py",
+      "sha256_before_portability_changes": "f96a14feff6f6af7625d7ca3ec12f095aeed657b0d7f3953512c1eaadeb999c2"
+    },
+    "vendor/authors/GRAM/model/vision_encoders/evaclip/pretrained.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/GRAM/model/vision_encoders/evaclip/pretrained.py",
+      "sha256_before_portability_changes": "9b1590c7ab7d8ed8c7a6237fee94332404243cf9fb9c3db98de3634a03f6fbf9"
+    },
+    "vendor/authors/GRAM/model/vision_encoders/evaclip/rope.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/GRAM/model/vision_encoders/evaclip/rope.py",
+      "sha256_before_portability_changes": "aa6d1a6459872e5f453d64786ae16bc067c0fd05c8d743e9cec8e9ac61e37a8a"
+    },
+    "vendor/authors/GRAM/model/vision_encoders/evaclip/timm_model.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/GRAM/model/vision_encoders/evaclip/timm_model.py",
+      "sha256_before_portability_changes": "47f11c8a75783209243b599cb1f9a22424d5825f569bb38ec080ce9e199635c9"
+    },
+    "vendor/authors/GRAM/model/vision_encoders/evaclip/tokenizer.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/GRAM/model/vision_encoders/evaclip/tokenizer.py",
+      "sha256_before_portability_changes": "f9eefe3949bc8438d35396e6a8862fdd9b265658cd7648c825ec34905ed62921"
+    },
+    "vendor/authors/GRAM/model/vision_encoders/evaclip/transform.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/GRAM/model/vision_encoders/evaclip/transform.py",
+      "sha256_before_portability_changes": "0c7c60bd1e0791c43c4b9c47bcffb69b21077e7efd7b3ebb95dd1f6ecbbbb785"
+    },
+    "vendor/authors/GRAM/model/vision_encoders/evaclip/transformer.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/GRAM/model/vision_encoders/evaclip/transformer.py",
+      "sha256_before_portability_changes": "76b0b3f1bca45c41abf0137c50b1671d102b982b85d2ad1cd6aa7fa1796ef43d"
+    },
+    "vendor/authors/GRAM/model/vision_encoders/evaclip/utils.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/GRAM/model/vision_encoders/evaclip/utils.py",
+      "sha256_before_portability_changes": "59b827f878fe65f4b580ee7286636a1d6edd432b154e650cfd780a15a1058606"
+    },
+    "vendor/authors/GRAM/model/vision_encoders/swin/swin.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/GRAM/model/vision_encoders/swin/swin.py",
+      "sha256_before_portability_changes": "804e391539cc7d0bd3ffb8f2e734340926d0f300b2f754013e1230370c734069"
+    },
+    "vendor/authors/GRAM/model/vision_encoders/swin/swin_config.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/GRAM/model/vision_encoders/swin/swin_config.py",
+      "sha256_before_portability_changes": "db885fe678bdd8596df3e69f22a6679fa7b336adb47a8c1044f41c2e5ee4ecab"
+    },
+    "vendor/authors/GRAM/model/vision_encoders/videoswin/videoswin.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/GRAM/model/vision_encoders/videoswin/videoswin.py",
+      "sha256_before_portability_changes": "7ec6809a63facc60f8202e293179e2946d95382237876619096f1e43a43189e8"
+    },
+    "vendor/authors/GRAM/utils/volume.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/GRAM/utils/volume.py",
+      "sha256_before_portability_changes": "e8715c9c871c1f579af55e0e5f0b45d0e2163f31c3f593b4aff6d9390b93a334"
+    },
+    "vendor/authors/VAST/LICENSE": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/VAST/LICENSE",
+      "sha256_before_portability_changes": "fb3fe43dedc76829ab21952068a479d70ddec05856a972bce920722c05d002a6"
+    },
+    "vendor/authors/VAST/model/__init__.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/VAST/model/__init__.py",
+      "sha256_before_portability_changes": "d1cf550919b7e2fa47ea835ae119c1bbc3fffc74290199bd1781d7fb09b4ac6a"
+    },
+    "vendor/authors/VAST/model/audio_encoders/ast/ast.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/VAST/model/audio_encoders/ast/ast.py",
+      "sha256_before_portability_changes": "ea767c294ca9a061c508e779104e7868381e72d2d276d33e4da9ca56be1f0699"
+    },
+    "vendor/authors/VAST/model/audio_encoders/beats/beats.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/VAST/model/audio_encoders/beats/beats.py",
+      "sha256_before_portability_changes": "9ca67ac62b2fa4665f1688647752e65a301a1316546c372ff40e6a5584317113"
+    },
+    "vendor/authors/VAST/model/general_module.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/VAST/model/general_module.py",
+      "sha256_before_portability_changes": "66a0c24de971999773d1a283cde5fcb9ac9cebd2bd143083e314674260aa74ac"
+    },
+    "vendor/authors/VAST/model/text_encoders/bert/bert.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/VAST/model/text_encoders/bert/bert.py",
+      "sha256_before_portability_changes": "79aa436a007014088ef371af5645de271d995fdd21564b753f83c4fbad87ad56"
+    },
+    "vendor/authors/VAST/model/vast.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/VAST/model/vast.py",
+      "sha256_before_portability_changes": "9a42c25a9ed50d86db9e9cb95d0697d2ccf32bfae8d23493735256711fd0548d"
+    },
+    "vendor/authors/VAST/model/vision_encoders/clip/clip.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/VAST/model/vision_encoders/clip/clip.py",
+      "sha256_before_portability_changes": "8773561cb96fb79f09ed27f2458420c860fa97028cd5caed2178c5fd94836d96"
+    },
+    "vendor/authors/VAST/model/vision_encoders/clip/clip_tokenizer.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/VAST/model/vision_encoders/clip/clip_tokenizer.py",
+      "sha256_before_portability_changes": "08eee694b3877d272b6af13d654acdd5afb835e7933d810845a753e3c0edf347"
+    },
+    "vendor/authors/VAST/model/vision_encoders/evaclip/__init__.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/VAST/model/vision_encoders/evaclip/__init__.py",
+      "sha256_before_portability_changes": "bb62a5a31381fe0a1d5fbbb2fefffc663f079e6e1a25188bce85595dfa597120"
+    },
+    "vendor/authors/VAST/model/vision_encoders/evaclip/bpe_simple_vocab_16e6.txt.gz": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/VAST/model/vision_encoders/evaclip/bpe_simple_vocab_16e6.txt.gz",
+      "sha256_before_portability_changes": "924691ac288e54409236115652ad4aa250f48203de50a9e4722a6ecd48d6804a"
+    },
+    "vendor/authors/VAST/model/vision_encoders/evaclip/constants.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/VAST/model/vision_encoders/evaclip/constants.py",
+      "sha256_before_portability_changes": "4289fac298908e2fb814ff84b4594ff49094a7eab074fed1b2ca6429339e923b"
+    },
+    "vendor/authors/VAST/model/vision_encoders/evaclip/eva_vit_model.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/VAST/model/vision_encoders/evaclip/eva_vit_model.py",
+      "sha256_before_portability_changes": "0c4cac1ba23769e93748916c391a347916c3546910f5a0565226f7e1ba2dc490"
+    },
+    "vendor/authors/VAST/model/vision_encoders/evaclip/factory.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/VAST/model/vision_encoders/evaclip/factory.py",
+      "sha256_before_portability_changes": "ec63091b770131139b98d6d55e820d55d56b47f8b2ccdbc8b08a388ce88115c7"
+    },
+    "vendor/authors/VAST/model/vision_encoders/evaclip/hf_configs.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/VAST/model/vision_encoders/evaclip/hf_configs.py",
+      "sha256_before_portability_changes": "7c295b99559e903187c74df5a3bcee2f5e23383e03911abd085c071f9f7d20c1"
+    },
+    "vendor/authors/VAST/model/vision_encoders/evaclip/hf_model.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/VAST/model/vision_encoders/evaclip/hf_model.py",
+      "sha256_before_portability_changes": "cd811a4655ed7040ef6b62e30e1b5afa42444e95c0e93e0953075992d5987f18"
+    },
+    "vendor/authors/VAST/model/vision_encoders/evaclip/loss.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/VAST/model/vision_encoders/evaclip/loss.py",
+      "sha256_before_portability_changes": "613153f4eafd82a355c591b69841f2dd49b3630ea48f8a0fdf076881fbc0dc47"
+    },
+    "vendor/authors/VAST/model/vision_encoders/evaclip/model.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/VAST/model/vision_encoders/evaclip/model.py",
+      "sha256_before_portability_changes": "849d11c6f5530ca8d3b259432fc238a8a0c02e172fe165141e1c4cabd61ddce3"
+    },
+    "vendor/authors/VAST/model/vision_encoders/evaclip/model_configs/EVA01-CLIP-B-16.json": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/VAST/model/vision_encoders/evaclip/model_configs/EVA01-CLIP-B-16.json",
+      "sha256_before_portability_changes": "5578cf993b759812aaab4d74f491d57f6929e35ece4cc4b9b2c25aefb39a8f1a"
+    },
+    "vendor/authors/VAST/model/vision_encoders/evaclip/model_configs/EVA01-CLIP-g-14-plus.json": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/VAST/model/vision_encoders/evaclip/model_configs/EVA01-CLIP-g-14-plus.json",
+      "sha256_before_portability_changes": "d5a01d9855a608efc8ddff1a8c0607aaad0ca171cc826764a8b1c23340b6620f"
+    },
+    "vendor/authors/VAST/model/vision_encoders/evaclip/model_configs/EVA01-CLIP-g-14.json": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/VAST/model/vision_encoders/evaclip/model_configs/EVA01-CLIP-g-14.json",
+      "sha256_before_portability_changes": "86b1b673220494603cf13435c81b63e458a7325eafe8b7253ec7b76069bf2dd3"
+    },
+    "vendor/authors/VAST/model/vision_encoders/evaclip/model_configs/EVA02-CLIP-B-16.json": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/VAST/model/vision_encoders/evaclip/model_configs/EVA02-CLIP-B-16.json",
+      "sha256_before_portability_changes": "34d8b8b4ed7ed08b797f7a69b04088be016a785579e6775bd142e3103d60bbc5"
+    },
+    "vendor/authors/VAST/model/vision_encoders/evaclip/model_configs/EVA02-CLIP-L-14-336.json": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/VAST/model/vision_encoders/evaclip/model_configs/EVA02-CLIP-L-14-336.json",
+      "sha256_before_portability_changes": "deb4f3c231f1263c346ad212808f1d08e267414f59d2f9915b7d6153494c44e6"
+    },
+    "vendor/authors/VAST/model/vision_encoders/evaclip/model_configs/EVA02-CLIP-L-14.json": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/VAST/model/vision_encoders/evaclip/model_configs/EVA02-CLIP-L-14.json",
+      "sha256_before_portability_changes": "af3acdaecc935956f696c826b9e1ae353770908e7f2c96ccc5eb27531f76515a"
+    },
+    "vendor/authors/VAST/model/vision_encoders/evaclip/model_configs/EVA02-CLIP-bigE-14-plus.json": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/VAST/model/vision_encoders/evaclip/model_configs/EVA02-CLIP-bigE-14-plus.json",
+      "sha256_before_portability_changes": "9b30b750339a8f6e328326449542cf7e5f47b2a22f130b1cf2b288a7d92c5e70"
+    },
+    "vendor/authors/VAST/model/vision_encoders/evaclip/model_configs/EVA02-CLIP-bigE-14.json": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/VAST/model/vision_encoders/evaclip/model_configs/EVA02-CLIP-bigE-14.json",
+      "sha256_before_portability_changes": "755f0abff9a32091106f71a8b771f19763577681d3d5eafe3ff23db16ff298a2"
+    },
+    "vendor/authors/VAST/model/vision_encoders/evaclip/modified_resnet.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/VAST/model/vision_encoders/evaclip/modified_resnet.py",
+      "sha256_before_portability_changes": "cb8a2e7e33849ee81b08906c484aef4f25e38125b2121c13ebe05d4b1b55773e"
+    },
+    "vendor/authors/VAST/model/vision_encoders/evaclip/openai.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/VAST/model/vision_encoders/evaclip/openai.py",
+      "sha256_before_portability_changes": "f96a14feff6f6af7625d7ca3ec12f095aeed657b0d7f3953512c1eaadeb999c2"
+    },
+    "vendor/authors/VAST/model/vision_encoders/evaclip/pretrained.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/VAST/model/vision_encoders/evaclip/pretrained.py",
+      "sha256_before_portability_changes": "9b1590c7ab7d8ed8c7a6237fee94332404243cf9fb9c3db98de3634a03f6fbf9"
+    },
+    "vendor/authors/VAST/model/vision_encoders/evaclip/rope.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/VAST/model/vision_encoders/evaclip/rope.py",
+      "sha256_before_portability_changes": "aa6d1a6459872e5f453d64786ae16bc067c0fd05c8d743e9cec8e9ac61e37a8a"
+    },
+    "vendor/authors/VAST/model/vision_encoders/evaclip/timm_model.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/VAST/model/vision_encoders/evaclip/timm_model.py",
+      "sha256_before_portability_changes": "47f11c8a75783209243b599cb1f9a22424d5825f569bb38ec080ce9e199635c9"
+    },
+    "vendor/authors/VAST/model/vision_encoders/evaclip/tokenizer.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/VAST/model/vision_encoders/evaclip/tokenizer.py",
+      "sha256_before_portability_changes": "f9eefe3949bc8438d35396e6a8862fdd9b265658cd7648c825ec34905ed62921"
+    },
+    "vendor/authors/VAST/model/vision_encoders/evaclip/transform.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/VAST/model/vision_encoders/evaclip/transform.py",
+      "sha256_before_portability_changes": "0c7c60bd1e0791c43c4b9c47bcffb69b21077e7efd7b3ebb95dd1f6ecbbbb785"
+    },
+    "vendor/authors/VAST/model/vision_encoders/evaclip/transformer.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/VAST/model/vision_encoders/evaclip/transformer.py",
+      "sha256_before_portability_changes": "76b0b3f1bca45c41abf0137c50b1671d102b982b85d2ad1cd6aa7fa1796ef43d"
+    },
+    "vendor/authors/VAST/model/vision_encoders/evaclip/utils.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/VAST/model/vision_encoders/evaclip/utils.py",
+      "sha256_before_portability_changes": "59b827f878fe65f4b580ee7286636a1d6edd432b154e650cfd780a15a1058606"
+    },
+    "vendor/authors/VAST/model/vision_encoders/swin/swin.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/VAST/model/vision_encoders/swin/swin.py",
+      "sha256_before_portability_changes": "804e391539cc7d0bd3ffb8f2e734340926d0f300b2f754013e1230370c734069"
+    },
+    "vendor/authors/VAST/model/vision_encoders/swin/swin_config.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/VAST/model/vision_encoders/swin/swin_config.py",
+      "sha256_before_portability_changes": "db885fe678bdd8596df3e69f22a6679fa7b336adb47a8c1044f41c2e5ee4ecab"
+    },
+    "vendor/authors/VAST/model/vision_encoders/videoswin/videoswin.py": {
+      "source": "code/outputs/lowdim_retrieval_20261021/authors/VAST/model/vision_encoders/videoswin/videoswin.py",
+      "sha256_before_portability_changes": "7ec6809a63facc60f8202e293179e2946d95382237876619096f1e43a43189e8"
+    },
+    "amp_update.py": {
+      "source": "code/experiments/joint30_five_datasets_20261103/maintenance/amp_retry_20261104/amp_update.py",
+      "sha256_before_portability_changes": "2a034cf67f766a335bb11d0bfb56ea6cd3ac28df0c2ff2271fe905e43844466e"
+    }
+  },
+  "changes": "Three explicit alignment_only early returns before native ITM; native joint paths unchanged. New portable orchestration, manifests, stage controls, and periodic evaluation."
+}

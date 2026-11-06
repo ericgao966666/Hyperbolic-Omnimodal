@@ -1,0 +1,37 @@
+{
+  "train": {
+    "videos": 82608,
+    "queries": 82608,
+    "logical_sha256": "6cdb76e0ed038558f5ab04728c50284ff9146378cf62ce6289f94ec258109548"
+  },
+  "val": {
+    "videos": 2048,
+    "queries": 2048,
+    "logical_sha256": "32948c5840556b5f3ef483a75496023415804d64e800ad40b5f85ff275c0565d"
+  },
+  "vast": {
+    "videos": 2051,
+    "queries": 2051,
+    "logical_sha256": "7a21c3d3315cd5542ba773ac4be6c18bce9606ec955326877d7642c15e42cdf5"
+  },
+  "msrvtt": {
+    "videos": 884,
+    "queries": 884,
+    "logical_sha256": "58a7d52004ee6e7607d80c3b719c3c0cf96672a5112e659a11b813de2aed51bb"
+  },
+  "vatex": {
+    "videos": 1224,
+    "queries": 12240,
+    "logical_sha256": "ec8c25f0b29f29a88be2bf281e1641d43725dc1e78e163a4803d227eaca5fdb3"
+  },
+  "activitynet": {
+    "videos": 3987,
+    "queries": 3987,
+    "logical_sha256": "4dfe836f46c90bd0874718485aa7509d68dc4b8ce61b857fcd86a25e49bc4c58"
+  },
+  "didemo": {
+    "videos": 995,
+    "queries": 995,
+    "logical_sha256": "7e69f37edfad0198594c790b503d9fa94a7f427687e8dd529f38ea9ae5838277"
+  }
+}

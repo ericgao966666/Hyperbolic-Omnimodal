@@ -1,0 +1,34 @@
+{
+  "data_root": "/ABSOLUTE/DATA_ROOT",
+  "output_root": "/ABSOLUTE/EXPERIMENT_OUTPUT",
+  "assets_root": "/ABSOLUTE/PRETRAINED_WEIGHTS",
+  "vast_checkpoint": "/ABSOLUTE/model_step_204994.pt",
+  "datasets": {
+    "vast": {
+      "video": "/ABSOLUTE/vast/videos",
+      "audio": "/ABSOLUTE/vast/audios"
+    },
+    "msrvtt": {
+      "video": "/ABSOLUTE/msrvtt/videos",
+      "audio": "/ABSOLUTE/msrvtt/audios"
+    },
+    "vatex": {
+      "video": "/ABSOLUTE/vatex/videos",
+      "audio": "/ABSOLUTE/vatex/audios"
+    },
+    "activitynet": {
+      "video": "/ABSOLUTE/activitynet/videos",
+      "audio": "/ABSOLUTE/activitynet/audios"
+    },
+    "didemo": {
+      "video": "/ABSOLUTE/didemo/videos",
+      "audio": "/ABSOLUTE/didemo/audios"
+    }
+  },
+  "resources": {
+    "gpu_memory_cap_gib": 64,
+    "gpu_reserve_gib": 16,
+    "disk_reserve_gib": 40,
+    "workers_per_rank": 2
+  }
+}

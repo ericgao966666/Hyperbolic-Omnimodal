@@ -1,0 +1,2 @@
+# Optional reporting only; does not affect the training protocol.
+matplotlib>=3.8,<4

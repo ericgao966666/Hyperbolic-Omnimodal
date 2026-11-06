@@ -1,0 +1,36 @@
+{
+  "val": {
+    "caption_to_video.npy": "5f6937cc46ea1e02db4737e09f7f3ac8d35d8d801759c8ecd278b914907ed3c7",
+    "input_ids.npy": "ad7fd3aa0d3349368cced9a369aa370f8f24adc53782879a71517fcbd58b84bb",
+    "attention_mask.npy": "ebad57a926eed64ae518a218af8be987d1b6b1f5ef60e06d2a4a4ef8f957a69b"
+  },
+  "vast": {
+    "caption_to_video.npy": "2e59652afa5c7784cc1f3312a360956f998e3c4f394398c173f5139c6ba81c50",
+    "input_ids.npy": "47950f0ea924b5872162cbf8f09f3881d9142f7a93a30b0a33a8689aaeb691e5",
+    "attention_mask.npy": "dcb8a08b7d3e8cab1e7bc7a76b37dfbe5ab4bdb48b4df87659365a3b20895370"
+  },
+  "msrvtt": {
+    "caption_to_video.npy": "c0ce32b02047ff9e713761183d3e3c90d309218bc29d47df80eaf417a60382c7",
+    "input_ids.npy": "d33c53e54e6210db04466c15a13a6aee11e1a5b1bafea125fc660ec3e04955b0",
+    "attention_mask.npy": "7c73bcc249308676ebe9fe494fc649cfec01b2964a21c16008bc49a1e8a688ea"
+  },
+  "vatex": {
+    "caption_to_video.npy": "cf09023cca1f1620b64f64834d5e26b440985542fa24c400a102822676122743",
+    "input_ids.npy": "1d1255e1949fa3ea49e8421660b08b41b6431930cd14a800fd4d598f553d85a3",
+    "attention_mask.npy": "e93e5af74fc7f752e392245360786a0c84e585021d20feb3bd7b50043ca98e85"
+  },
+  "activitynet": {
+    "caption_to_video.npy": "e35cc138d06b3bcf1cc1533a58f9507d12e91cc38266977d7ddac75aa9992e0c",
+    "input_ids.npy": "14c1a3f689bd4ba2e12ec25a35ee603844fee2cb0adcb816468ceada408f761c",
+    "attention_mask.npy": "16d929a3aefb13f9a0813e436ad12f90381f0373c19c2c046346998f01abefa2"
+  },
+  "didemo": {
+    "caption_to_video.npy": "260835412017eb092264c06a5b3d8321c2f3261f456002865538f955471a7170",
+    "input_ids.npy": "de8d2f2aa5b1bedceeb438a626bc5c025ff44e58252dd10628740035ed00a695",
+    "attention_mask.npy": "166fa1a0824dc477c139ea9d96ccfe9a31519aac79515757b29e5b6c47fb7d79"
+  },
+  "vast_combined": {
+    "token_ids.npy": "fe8601e3bb961cd9f3abc15228dc1593bfa8390115cfed1854e1e7913f855711",
+    "token_mask.npy": "580f331cd1186279d7e6c4944fbe4853811457e5d532e20d52df99dfa5e7ae9c"
+  }
+}

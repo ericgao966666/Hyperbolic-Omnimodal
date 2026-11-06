@@ -1,0 +1,144 @@
+{
+  "name": "native-baselines-vast-init-5plus25",
+  "methods": [
+    "vast",
+    "gram",
+    "pmrl"
+  ],
+  "seed": 50,
+  "dimension": 512,
+  "global_batch": 256,
+  "steps_per_epoch": 322,
+  "warmup_epochs": 5,
+  "joint_epochs": 25,
+  "epochs": 30,
+  "warmup_steps": 1610,
+  "total_steps": 9660,
+  "initialization": {
+    "all_methods": "same VAST checkpoint",
+    "filename": "model_step_204994.pt",
+    "sha256": "9005d283ea0de99549efbedeb7d21c8e25bea8fa41c0f6570296b0e7a055a6c5",
+    "inherit": "common backbone, compatible alignment heads and ITM; optimizer fresh",
+    "shared_loaded_sha": "94cd4d6a82cb0bd2e05c609ddfda6fcdd72ba72fb51e96c8585d0a0d1b58b963"
+  },
+  "warmup": {
+    "backbone": "frozen eval; same deterministic cached pretrained features",
+    "itm": "frozen, no ITM loss",
+    "heads": {
+      "vast": [
+        "contra_head_t",
+        "contra_head_va",
+        "contra_temp"
+      ],
+      "gram": [
+        "contra_head_t",
+        "contra_head_v",
+        "contra_head_a",
+        "contra_temp"
+      ],
+      "pmrl": [
+        "contra_head_t",
+        "contra_head_v",
+        "contra_head_a"
+      ]
+    }
+  },
+  "joint": {
+    "unfreeze": [
+      "vision",
+      "audio",
+      "shared text/cross-modal BERT",
+      "active alignment heads",
+      "ITM",
+      "ITM input projections and embeddings"
+    ],
+    "carry_head_optimizer": true,
+    "new_backbone_optimizer": true
+  },
+  "objective": {
+    "vast": "native symmetric T-VA contrastive CE; label smoothing .1",
+    "gram": "native symmetric negative Gram-volume CE; label smoothing .1",
+    "pmrl": "native intra+global-batch inter spectral losses; tau1=.05 tau2=.1",
+    "itm": "joint only: .1 native three-group CE; 1 positive and 2 sampled negatives"
+  },
+  "optimizer": {
+    "type": "AdamW",
+    "betas": [
+      0.9,
+      0.98
+    ],
+    "weight_decay": 0.01,
+    "gradient_clip": 2.0,
+    "head_lr": 0.0001,
+    "vision_lr": 5e-07,
+    "other_lr": 2e-05,
+    "head_warmup_steps": 483,
+    "backbone_warmup_steps": 322,
+    "decay": "cosine",
+    "no_decay": "bias and vectors/scalars"
+  },
+  "precision": {
+    "autocast": "float16",
+    "tf32": false,
+    "deterministic": true,
+    "amp_initial_scale": 1024,
+    "failed_update": "bounded same-batch RNG-preserving retry; no skipped updates"
+  },
+  "inputs": {
+    "vision_frames": 2,
+    "audio_windows": 1,
+    "text_tokens": 40,
+    "subtitles": false,
+    "drop_last": true,
+    "train_order": "torch.randperm(seed50+epoch); same global batches at every world size"
+  },
+  "evaluation": {
+    "validation_every_epoch": true,
+    "itm_epochs": [
+      0,
+      5,
+      6,
+      10,
+      15,
+      20,
+      25,
+      30
+    ],
+    "test_epoch": 30,
+    "datasets": [
+      "vast",
+      "msrvtt",
+      "vatex",
+      "activitynet",
+      "didemo"
+    ],
+    "task": "T<->VA; all fixed captions; native ITC score and ownTop32 pure ITM; no score fusion"
+  },
+  "checkpoints": {
+    "warmup_head_epochs": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "joint_model_epochs": [
+      6,
+      10,
+      15,
+      20,
+      25,
+      30
+    ],
+    "rolling_full_resume_every_epoch": true,
+    "best": "reference retained validation checkpoint; primary remains epoch30"
+  },
+  "limitations": [
+    "One seed; matched added steps are not identical FLOPs",
+    "All methods use the same VAST initialization, not their released method-specific checkpoint",
+    "Current geometric method has different newly initialized heads and head hyperparameter search budget",
+    "No native entailment-cone metric for these baselines",
+    "Fixed audiovisual cohorts are not full paper benchmark protocols",
+    "Exact cross-hardware bitwise reproducibility is not promised"
+  ]
+}

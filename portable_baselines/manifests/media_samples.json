@@ -1,0 +1,338 @@
+[
+  {
+    "dataset": "train",
+    "index": 0,
+    "kind": "video",
+    "sha256": "1c774b6cd5f84e0de3d90b09b34cb1b119d9f3a931ec00b08660e7978e47eef0"
+  },
+  {
+    "dataset": "train",
+    "index": 0,
+    "kind": "audio",
+    "sha256": "4353d543deedf9be9bbf0b672338fe0e57f5142078d3dc0d9baaf7a059dee745"
+  },
+  {
+    "dataset": "train",
+    "index": 27536,
+    "kind": "video",
+    "sha256": "4238c0cfadfe53306b7a6e25d8142ae29906e0674fda3ba3d608f18b56282ffa"
+  },
+  {
+    "dataset": "train",
+    "index": 27536,
+    "kind": "audio",
+    "sha256": "a316aca92a5a7d6bba528de0d597bb663607ce4dc3a87e14e51e01cd7f3579b2"
+  },
+  {
+    "dataset": "train",
+    "index": 55072,
+    "kind": "video",
+    "sha256": "155d3a7e7f433327499bfcb6a45299cc307de5a5aa4c80df963102a6f198bf5c"
+  },
+  {
+    "dataset": "train",
+    "index": 55072,
+    "kind": "audio",
+    "sha256": "4f81f668bb88df1e42d00ec09d536d98f6d2509db64b7dd0d8eb7f993400a28a"
+  },
+  {
+    "dataset": "train",
+    "index": 82607,
+    "kind": "video",
+    "sha256": "09c5559067894de093536f2aa7ee49be8fadbce5d20ce1e827d44be13fe5bc04"
+  },
+  {
+    "dataset": "train",
+    "index": 82607,
+    "kind": "audio",
+    "sha256": "f6264e7ccfdc76e3bc311cd60087e65dfb27b5dbaab7f2026272c311a1a11b96"
+  },
+  {
+    "dataset": "val",
+    "index": 0,
+    "kind": "video",
+    "sha256": "4904c9be8443a525ab9788852ace17c8994a0b3fa2e1efcce3d0964b3bf43e39"
+  },
+  {
+    "dataset": "val",
+    "index": 0,
+    "kind": "audio",
+    "sha256": "f09fe6cc4abafaaddfbea55d2525c95c4aff78fbabe94ce5e87c615567e92f70"
+  },
+  {
+    "dataset": "val",
+    "index": 682,
+    "kind": "video",
+    "sha256": "2bf88afa1d652eee80e013aac3056d08eaa87bcb74729ded3eec875137321353"
+  },
+  {
+    "dataset": "val",
+    "index": 682,
+    "kind": "audio",
+    "sha256": "9039c8fb01b5e9acaf157ae9b3a33c3035d41ff4ee5cde15c13c26f0e01b5cdb"
+  },
+  {
+    "dataset": "val",
+    "index": 1365,
+    "kind": "video",
+    "sha256": "cd092dad54ce289aa70453ba372ae1da39d24d71b81a5241610f533f311c896e"
+  },
+  {
+    "dataset": "val",
+    "index": 1365,
+    "kind": "audio",
+    "sha256": "b15a157a4cedb8fd0cf6d7040d572563d525c38c7854794a4f7637bf5b940c2c"
+  },
+  {
+    "dataset": "val",
+    "index": 2047,
+    "kind": "video",
+    "sha256": "e6fe91806641ca593a313a56fed3f2dce273f5ce803c5674e7dd7dc272fb6008"
+  },
+  {
+    "dataset": "val",
+    "index": 2047,
+    "kind": "audio",
+    "sha256": "7c567c411aaecf944b9234450d414596e922daa87656b3d63eea9787ef14b19e"
+  },
+  {
+    "dataset": "vast",
+    "index": 0,
+    "kind": "video",
+    "sha256": "ce06533dd077378ebaeb1661f225722363232fb7fd0c02bc1ed26c087be4a601"
+  },
+  {
+    "dataset": "vast",
+    "index": 0,
+    "kind": "audio",
+    "sha256": "d095937eed2e2dea32370609f34d4bc6a5d8d91d55a9890d312f74ef99985db0"
+  },
+  {
+    "dataset": "vast",
+    "index": 683,
+    "kind": "video",
+    "sha256": "4ec02acc56319147431d1e5bbf372b664335ea95086a635c851cd4a1520f1374"
+  },
+  {
+    "dataset": "vast",
+    "index": 683,
+    "kind": "audio",
+    "sha256": "130bedfe83cf3a06d433dab740b3063c9bc709c7bd4381d85902b5b4e6650f01"
+  },
+  {
+    "dataset": "vast",
+    "index": 1367,
+    "kind": "video",
+    "sha256": "2c539fa121ddfb29143fcf1d2b6ccf7a8e2078531d89c104660e09dbae913e72"
+  },
+  {
+    "dataset": "vast",
+    "index": 1367,
+    "kind": "audio",
+    "sha256": "42531e5d7ce969a8cda160819a184719c5c7c8bb4688036ddaab5816e8f659a0"
+  },
+  {
+    "dataset": "vast",
+    "index": 2050,
+    "kind": "video",
+    "sha256": "7759f0cd706a71f44d3d2d34dd337794f667d242d181c40057201adf37ea79ed"
+  },
+  {
+    "dataset": "vast",
+    "index": 2050,
+    "kind": "audio",
+    "sha256": "74ab2231c3d421a79529e609aa4aa1853f1b7712031766149a744ec0f4d70cc7"
+  },
+  {
+    "dataset": "msrvtt",
+    "index": 0,
+    "kind": "video",
+    "sha256": "33e21c16d5388684b61d7251b9d4e418f8146c3ba3fa400ebd8d913058687cfc"
+  },
+  {
+    "dataset": "msrvtt",
+    "index": 0,
+    "kind": "audio",
+    "sha256": "e32cb4f5febe8abde432a90106b727f4bac7d4895318f3376706035ff68c56d8"
+  },
+  {
+    "dataset": "msrvtt",
+    "index": 294,
+    "kind": "video",
+    "sha256": "1893d3d09478f718b0a2761c305d72bf8d2db0bd019c2828d842d4059ca818df"
+  },
+  {
+    "dataset": "msrvtt",
+    "index": 294,
+    "kind": "audio",
+    "sha256": "f6c2f195866d2157a96f954c4661a552605e2b004cd0b0a46838c7932db537d9"
+  },
+  {
+    "dataset": "msrvtt",
+    "index": 589,
+    "kind": "video",
+    "sha256": "9e97fbd415c6dee35fdca791dd436a45115d4291097e99eadb50809700897a97"
+  },
+  {
+    "dataset": "msrvtt",
+    "index": 589,
+    "kind": "audio",
+    "sha256": "f7a6ad950c8a3c98e7ecfbe7c6f0e30be673182e815d50a6ab32e79336919128"
+  },
+  {
+    "dataset": "msrvtt",
+    "index": 883,
+    "kind": "video",
+    "sha256": "0a62e0bf8d0e9cc57d4e245f94cd577b1c5b4da33aff58bbffdfaa4c2599fa75"
+  },
+  {
+    "dataset": "msrvtt",
+    "index": 883,
+    "kind": "audio",
+    "sha256": "bf15626810002a77632fb3983dddf6098922a5900d2b0712538db117f495e80f"
+  },
+  {
+    "dataset": "vatex",
+    "index": 0,
+    "kind": "video",
+    "sha256": "dea9c268de993a66cb78bf737392fa85bfe8be455561c08f094b1fb975961706"
+  },
+  {
+    "dataset": "vatex",
+    "index": 0,
+    "kind": "audio",
+    "sha256": "a1136804fa7cac9b22f590452f5346dbc665f221ac08f9ce3d2ac5cddad45cad"
+  },
+  {
+    "dataset": "vatex",
+    "index": 408,
+    "kind": "video",
+    "sha256": "801dc44fa2b6219fb1cf350fefa415c4b76abecd584a07dd2ddeab20ddffe02c"
+  },
+  {
+    "dataset": "vatex",
+    "index": 408,
+    "kind": "audio",
+    "sha256": "2a836cd9c0c5bac70cf76d04a9490f4f5cdc2db3ba974fb5bdd52845f041a194"
+  },
+  {
+    "dataset": "vatex",
+    "index": 816,
+    "kind": "video",
+    "sha256": "73473711d45e6cd585558aaea2400e4e7c58a7eebf8b3525030b44d56c9723d9"
+  },
+  {
+    "dataset": "vatex",
+    "index": 816,
+    "kind": "audio",
+    "sha256": "1c2c62c1529c5c056d299052e6f0286dc18f204f596bec855c4fff31a8ba23b2"
+  },
+  {
+    "dataset": "vatex",
+    "index": 1223,
+    "kind": "video",
+    "sha256": "50d47b6372f65a1cb07de7697374492da730729c814b0611f50a81a08f10294f"
+  },
+  {
+    "dataset": "vatex",
+    "index": 1223,
+    "kind": "audio",
+    "sha256": "7dd51c351fe4da74f5e2059358d6ffd718199a07d4573663a4df0be8926a5b67"
+  },
+  {
+    "dataset": "activitynet",
+    "index": 0,
+    "kind": "video",
+    "sha256": "6548fe37eabf508f780c660ed70fd71778014aba66d6ce87979a670be79b9791"
+  },
+  {
+    "dataset": "activitynet",
+    "index": 0,
+    "kind": "audio",
+    "sha256": "61a1bb919108bbf0b0ccf493ff94ccb87d38e8801113269678ba587bb51b9401"
+  },
+  {
+    "dataset": "activitynet",
+    "index": 1329,
+    "kind": "video",
+    "sha256": "814ae38cde260b5fffc2d7d60a7350ec926fb2316c2153f4ed4e5c9032d0514c"
+  },
+  {
+    "dataset": "activitynet",
+    "index": 1329,
+    "kind": "audio",
+    "sha256": "2782a6ee4852fb24f73b4778b5dbd62512ec4a51e2e600a33630cd9f6facc9b2"
+  },
+  {
+    "dataset": "activitynet",
+    "index": 2658,
+    "kind": "video",
+    "sha256": "8d9eee3b3a542e5936ee7521459bf7c03e7de2b818af85d0d4c1ff3f79ccdbc7"
+  },
+  {
+    "dataset": "activitynet",
+    "index": 2658,
+    "kind": "audio",
+    "sha256": "fbacfa2f05b3db828f3cee5d6472038897ae66c65a996ae3377fda7e4058c8d0"
+  },
+  {
+    "dataset": "activitynet",
+    "index": 3986,
+    "kind": "video",
+    "sha256": "305deddc909bd6255f6c09e8d0fd9b9e6baa19af03559cf2f133a7f4f9a35e60"
+  },
+  {
+    "dataset": "activitynet",
+    "index": 3986,
+    "kind": "audio",
+    "sha256": "b404c2ce3dd057f78b3ca36630fe6ccd523c978dd7dca018d0a4eb9029cb129c"
+  },
+  {
+    "dataset": "didemo",
+    "index": 0,
+    "kind": "video",
+    "sha256": "5933da7c6e5d55d44c4249f7b5ef706fd835a522daabcda728459ad519e1c162"
+  },
+  {
+    "dataset": "didemo",
+    "index": 0,
+    "kind": "audio",
+    "sha256": "b8361c4bc3c78b76f42ea9e15d0f47b81b56f709576382affd49c1d504a74af1"
+  },
+  {
+    "dataset": "didemo",
+    "index": 331,
+    "kind": "video",
+    "sha256": "2a7feefe8957e4c9a307fee59b46b649f3484d66309d76752b23ab8721868f60"
+  },
+  {
+    "dataset": "didemo",
+    "index": 331,
+    "kind": "audio",
+    "sha256": "b427f33ec605ff9db0ea8e83ff9c72e4d144b193881225d2e53444e9052048cd"
+  },
+  {
+    "dataset": "didemo",
+    "index": 663,
+    "kind": "video",
+    "sha256": "eac30047a317e6298d11ed403ec2aea66a340139fa1d59e08d47528ff25669ed"
+  },
+  {
+    "dataset": "didemo",
+    "index": 663,
+    "kind": "audio",
+    "sha256": "8c51db7bd05fdae20ec0de59220453fed37b0da0df6cad614d02efc00a3d1551"
+  },
+  {
+    "dataset": "didemo",
+    "index": 994,
+    "kind": "video",
+    "sha256": "915abf37f6d5831eb7449e639656c39d1bb747e4e3f29f6cabc1b77f19afc6e9"
+  },
+  {
+    "dataset": "didemo",
+    "index": 994,
+    "kind": "audio",
+    "sha256": "b559bde17c71a57563f6fa0696297d90315771f2d5574f0ae31bb98b5908abd9"
+  }
+]

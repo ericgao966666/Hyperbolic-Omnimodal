@@ -1,0 +1,8 @@
+.venv/
+.local/
+configs/paths.local.json
+__pycache__/
+*.pyc
+outputs/
+.cache/
+.tmp/
