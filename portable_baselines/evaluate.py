@@ -1,4 +1,4 @@
-"""Only completed epoch30 models may enter the five fixed test cohorts."""
+"""Only completed fixed15 validation-selected models may enter the five fixed test cohorts."""
 import argparse,fcntl,os,uuid
 from pathlib import Path
 import common as C
@@ -11,17 +11,20 @@ def worker(rank,a):
     try:
         run=paths.out('runs',a.method);done=C.read(run/'DONE.json');final=run/'final.pt'
         if done['identity']!=paths.identity(a.method,done['identity']['world']):raise RuntimeError('Final model provenance differs')
-        if done['step']!=9660 or not done['final_reload_verified'] or C.sha(final)!=done['final_sha']:raise RuntimeError('Unverified fixed-final model')
-        model=System(paths,a.method);model.set_phase('joint');ck=torch.load(final,map_location='cpu',weights_only=True,mmap=True);load_active(model,ck['model']);del ck
+        if done['step']!=4830 or not done['final_reload_verified'] or C.sha(final)!=done['final_sha']:raise RuntimeError('Unverified fixed-final model')
+        if C.sha(run/'SELECTION.json')!=done['selection_sha']:raise RuntimeError('Validation selection changed')
+        choice=C.read(run/'SELECTION.json')['choices']['retrieval'];selected=Path(choice['checkpoint'])
+        if C.sha(selected)!=choice['checkpoint_sha']:raise RuntimeError('Selected model changed')
+        model=System(paths,a.method);model.set_phase('joint');ck=torch.load(selected,map_location='cpu',weights_only=True,mmap=True);load_active(model,ck['model']);del ck
         model.to(device).eval().requires_grad_(False);folder=paths.out('evaluation',a.method,a.dataset);folder.mkdir(parents=True,exist_ok=True)
         if (folder/'DONE.json').exists():
             d=C.read(folder/'DONE.json')
-            if d['checkpoint_sha']!=done['final_sha'] or C.sha(folder/'results.json')!=d['results_sha']:raise RuntimeError('Existing test provenance mismatch')
+            if d['checkpoint_sha']!=choice['checkpoint_sha'] or C.sha(folder/'results.json')!=d['results_sha']:raise RuntimeError('Existing test provenance mismatch')
             return
         result=evaluate(model,paths,rank,len(a.devices),name=a.dataset,itm=True,progress=folder/'progress.json',save_scores=folder/'scores.pt')
         if rank==0:
-            result.update(method=a.method,dataset=a.dataset,epoch=30,step=9660,checkpoint_sha=done['final_sha'],identity=done['identity'],time=C.utc())
-            C.write(folder/'results.json',result);C.write(folder/'DONE.json',dict(passed=True,checkpoint_sha=done['final_sha'],results_sha=C.sha(folder/'results.json'),scores_sha=C.sha(folder/'scores.pt'),time=C.utc()))
+            result.update(method=a.method,dataset=a.dataset,epoch=choice['epoch'],step=choice['step'],budget_epochs=15,budget_steps=4830,checkpoint_sha=choice['checkpoint_sha'],identity=done['identity'],time=C.utc())
+            C.write(folder/'results.json',result);C.write(folder/'DONE.json',dict(passed=True,checkpoint_sha=choice['checkpoint_sha'],results_sha=C.sha(folder/'results.json'),scores_sha=C.sha(folder/'scores.pt'),time=C.utc()))
     finally:dist.destroy_process_group()
 
 def main():

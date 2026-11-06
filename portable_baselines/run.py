@@ -36,7 +36,7 @@ def main():
             f=paths.out('checks',f'{method}_world{world}.json')
             return f.exists() and C.read(f).get('identity')==paths.identity(method,world) and C.read(f).get('passed')
         if job['phase']=='train':
-            f=paths.out('runs',method,'DONE.json');return f.exists() and C.read(f).get('identity')==paths.identity(method,world) and C.read(f).get('passed')
+            f=paths.out('runs',method,'DONE.json');return f.exists() and C.read(f).get('step')==4830 and C.read(f).get('identity')==paths.identity(method,world) and C.read(f).get('passed')
         return paths.out('evaluation',method,job['dataset'],'DONE.json').exists()
     def launch(slot,phase,method,dataset=None):
         key=f'{phase}_{method}'+('_'+dataset if dataset else '')

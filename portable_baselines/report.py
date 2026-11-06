@@ -14,15 +14,15 @@ def main():
             if not (folder/'DONE.json').exists():continue
             d=C.read(folder/'DONE.json')
             if C.sha(folder/'results.json')!=d['results_sha']:raise RuntimeError('Test result changed')
-            v=C.read(folder/'results.json');test.append(dict(method=method,dataset=name,videos=v['videos'],captions=v['caption_queries'],**{'ITC_'+k:x for k,x in v['itc']['mean'].items()},**{'ITM_'+k:x for k,x in v['itm']['mean'].items()}))
+            v=C.read(folder/'results.json');test.append(dict(method=method,dataset=name,selected_epoch=v['epoch'],budget_epochs=15,videos=v['videos'],captions=v['caption_queries'],**{'ITC_'+k:x for k,x in v['itc']['mean'].items()},**{'ITM_'+k:x for k,x in v['itm']['mean'].items()}))
     folder=paths.out('reports');folder.mkdir(exist_ok=True)
     for name,rows in [('validation.csv',curves),('tests.csv',test)]:
         if rows:
             with (folder/name).open('w') as f:w=csv.DictWriter(f,fieldnames=list(rows[0]));w.writeheader();w.writerows(rows)
-    lines=['# VAST initialization / 5+25 baselines','',f'Updated: {C.utc()}','',f'Completed training: {sum(paths.out("runs",m,"DONE.json").exists() for m in C.protocol()["methods"])}/3; tests: {len(test)}/15.','',
+    lines=['# VAST initialization / fixed15 baselines','',f'Updated: {C.utc()}','',f'Completed training: {sum(paths.out("runs",m,"DONE.json").exists() for m in C.protocol()["methods"])}/3; tests: {len(test)}/15.','',
         '| Method | Phase | Epoch | Step | State |','| --- | --- | ---: | ---: | --- |']
     for s in states:lines.append(f'| {s["method"]} | {s.get("phase", "")} | {s.get("epoch", "")} | {s.get("step", "")} | {s["state"]} |')
-    lines+=['','[Validation CSV](validation.csv) · [Final tests CSV](tests.csv)','', 'Validation curves are diagnostic. Primary test model is fixed epoch30. Baselines have no native entailment-cone metric.','']
+    lines+=['','[Validation CSV](validation.csv) · [Final tests CSV](tests.csv)','', 'Validation curves are diagnostic. Training budget is fixed15 with no early stopping; primary test model is validation ITM best. Baselines have no native entailment-cone metric.','']
     (folder/'REPORT.md').write_text('\n'.join(lines));C.write(folder/'summary.json',dict(states=states,validation=curves,tests=test,time=C.utc()))
     if curves:
         try:

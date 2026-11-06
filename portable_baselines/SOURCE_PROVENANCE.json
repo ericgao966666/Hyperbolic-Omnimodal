@@ -586,5 +586,13 @@
       "sha256_before_portability_changes": "2a034cf67f766a335bb11d0bfb56ea6cd3ac28df0c2ff2271fe905e43844466e"
     }
   },
-  "changes": "Three explicit alignment_only early returns before native ITM; native joint paths unchanged. New portable orchestration, manifests, stage controls, and periodic evaluation."
+  "changes": "Three explicit alignment_only early returns before native ITM; native joint paths unchanged. New portable orchestration, manifests, stage controls, and periodic evaluation.",
+  "revision_parent_commit": "ca8a866c2a7d9a1f5eec43049ec1153e4a3cbdc2",
+  "revision_changes": [
+    "fixed15/4830 budget; no early stopping",
+    "same original LR prefix",
+    "every-joint-epoch ITM",
+    "validation ITM primary checkpoint after full budget; best ITC/final diagnostic",
+    "bounded own-run checkpoint retention"
+  ]
 }

@@ -43,6 +43,12 @@ def main():
     from validation import retrieval_pools,recall
     from inputs import global_batches
     torch.set_num_threads(2);checks=[]
+    assert C.protocol()['epochs']==15 and C.protocol()['total_steps']==4830 and not C.protocol()['early_stopping']
+    assert C.protocol()['evaluation']['itm_epochs']==[0,*range(5,16)]
+    from select_checkpoints import choose
+    history=[dict(epoch=6,itm=dict(mean={'R@1':50.}),itc=dict(mean={'R@1':38.})),dict(epoch=7,itm=dict(mean={'R@1':51.}),itc=dict(mean={'R@1':37.})),dict(epoch=15,itm=dict(mean={'R@1':49.}),itc=dict(mean={'R@1':35.}))]
+    selected=choose(history);assert selected['retrieval_epoch']==7 and selected['itc_epoch']==6
+    checks.append('fixed4830 steps, no early stopping; every-joint-epoch ITM; validation selection differs from final model')
     for p in C.ROOT.glob('*.py'):ast.parse(p.read_text(),filename=str(p))
     manifest={k:C.manifest(k) for k in C.read(C.ROOT/'manifests/index.json')}
     groups=[]

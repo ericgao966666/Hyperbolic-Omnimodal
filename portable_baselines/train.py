@@ -1,4 +1,4 @@
-"""5 head epochs +25 joint epochs; exact stage-aware resume and periodic validation."""
+"""5 head epochs +10 joint epochs (fixed15, no early stopping); exact stage-aware resume and periodic validation."""
 import argparse,copy,fcntl,os,random,signal,time,traceback,uuid
 from pathlib import Path
 import common as C
@@ -40,8 +40,16 @@ def worker(rank,args):
             C.write(folder/'checkpoint.json',dict(step=step,phase=phase,sha=C.sha(folder/'last.pt'),time=C.utc()))
         dist.barrier()
     def validate_epoch(epoch):
+        from select_checkpoints import update
         dest=folder/'validation'/f'epoch_{epoch:03d}.json'
-        if C.broadcast(dest.exists() if rank==0 else None):return
+        if C.broadcast(dest.exists() if rank==0 else None):
+            if rank==0 and epoch>0:
+                snap=folder/'snapshots'/f'epoch_{epoch:03d}.pt'
+                if not snap.exists():
+                    paths.save(snap,dict(identity=identity,epoch=epoch,step=step,phase=phase,model=active_state(model)))
+                    C.write(snap.with_suffix('.json'),dict(sha=C.sha(snap),epoch=epoch,step=step))
+                if epoch>=6:update(paths,folder)
+            dist.barrier();return
         full_itm=epoch in C.protocol()['evaluation']['itm_epochs']
         if rank==0:C.write(folder/'status.json',dict(state='validating',epoch=epoch,step=step,itm=full_itm,time=C.utc()))
         value=evaluate(model,paths,rank,world,itm=full_itm,cache_check=epoch==5)
@@ -50,14 +58,18 @@ def worker(rank,args):
             print(C.utc(),args.method,'epoch',epoch,'ITC',value['itc']['mean']['R@1'],'ITM',value.get('itm',{}).get('mean',{}).get('R@1'),flush=True)
             if epoch and (epoch<=5 or epoch in C.protocol()['checkpoints']['joint_model_epochs']):
                 snap=folder/'snapshots'/f'epoch_{epoch:03d}.pt'
-                if not snap.exists():paths.save(snap,dict(identity=identity,epoch=epoch,step=step,phase=phase,model=active_state(model)))
-                if full_itm:
-                    best=folder/'BEST.json';score=value['itm']['mean']['R@1']
-                    if not best.exists() or score>C.read(best)['R1']:C.write(best,dict(epoch=epoch,R1=score,weights=str(snap.relative_to(paths.output_root)),phase=phase,primary_test_epoch=30))
+                if not snap.exists():
+                    paths.save(snap,dict(identity=identity,epoch=epoch,step=step,phase=phase,model=active_state(model)))
+                    C.write(snap.with_suffix('.json'),dict(sha=C.sha(snap),epoch=epoch,step=step))
+                if epoch>=6:update(paths,folder)
         dist.barrier()
     try:
         if step%322==0:validate_epoch(step//322)
-        while step<9660:
+        while step<4830:
+            if rank==0 and step>=1932:
+                from select_checkpoints import update
+                update(paths,folder,keep_latest=False)
+            dist.barrier()
             if step>=1610 and phase=='warmup':
                 old=copy.deepcopy(opt.state_dict());rng=A.rng_capture(device);del ddp,opt
                 model.set_phase('joint');opt=optimizer(model,old)
@@ -74,7 +86,8 @@ def worker(rank,args):
                     import shutil
                     bad=stop[0] or free<reserve or (rank==0 and shutil.disk_usage(paths.output_root).free<paths.reserve+bytes_needed)
                     if A.any_rank(bad,device):
-                        checkpoint()
+                        saved=C.read(folder/'checkpoint.json')['step'] if (folder/'checkpoint.json').exists() else -1
+                        if saved!=step:checkpoint()
                         if rank==0:C.write(folder/'status.json',dict(state='paused_resource_or_signal',step=step,phase=phase,epoch=epoch,time=C.utc()))
                         return 75
                 if phase=='warmup':idx=raw;batch=__import__('easydict').EasyDict(pooled=pool.fetch(idx,device))
@@ -85,18 +98,24 @@ def worker(rank,args):
                 loss,terms,norm,scaler,grad,amp=A.update_batch(ddp,model,opt,scaler,batch,device,step,probe=probe if step in (0,1610) else None,on_retry=retry)
                 step+=1;values=torch.tensor([float(loss.detach()),float(norm),*[float(v.detach()) for v in terms.values()]],device=device);dist.all_reduce(values);values/=world
                 if rank==0 and (step==1 or step%10==0 or step==1611):
-                    event=dict(state='training',method=args.method,phase=phase,epoch=epoch,step=step,total_steps=9660,time=C.utc(),loss=float(values[0]),grad_norm=float(values[1]),terms=dict(zip(terms,[float(x) for x in values[2:]])),learning_rates={g['kind']:g['lr'] for g in opt.param_groups},amp=amp,gradients=grad,elapsed_seconds=time.monotonic()-started,resumed_step=resumed_step,peak_reserved_gib=torch.cuda.max_memory_reserved()/C.GIB)
+                    event=dict(state='training',method=args.method,phase=phase,epoch=epoch,step=step,total_steps=4830,time=C.utc(),loss=float(values[0]),grad_norm=float(values[1]),terms=dict(zip(terms,[float(x) for x in values[2:]])),learning_rates={g['kind']:g['lr'] for g in opt.param_groups},amp=amp,gradients=grad,elapsed_seconds=time.monotonic()-started,resumed_step=resumed_step,peak_reserved_gib=torch.cuda.max_memory_reserved()/C.GIB)
                     C.write(folder/'status.json',event);C.append(folder/'training_metrics.jsonl',event);print(C.utc(),args.method,phase,step,event['loss'],flush=True)
                 del loss,terms,batch,raw
                 if step%322==0:checkpoint();validate_epoch(step//322)
             del batches
         if rank==0:
-            final=folder/'final.pt';snapshot=folder/'snapshots/epoch_030.pt'
+            final=folder/'final.pt';snapshot=folder/'snapshots/epoch_015.pt'
             if not final.exists():os.link(snapshot,final)
             ck=torch.load(final,map_location='cpu',weights_only=True,mmap=True);actual=model.state_dict()
-            if ck['step']!=9660 or ck['identity']!=identity or any(not torch.equal(v,actual[k].detach().cpu()) for k,v in ck['model'].items()):raise RuntimeError('Final checkpoint reload mismatch')
-            C.write(folder/'DONE.json',dict(passed=True,step=9660,identity=identity,final_sha=C.sha(final),final_reload_verified=True,time=C.utc()))
-            C.write(folder/'status.json',dict(state='completed',step=9660,epoch=30,time=C.utc()))
+            if ck['step']!=4830 or ck['identity']!=identity or any(not torch.equal(v,actual[k].detach().cpu()) for k,v in ck['model'].items()):raise RuntimeError('Final checkpoint reload mismatch')
+            from select_checkpoints import update
+            update(paths,folder,keep_latest=True,final=True)
+            C.write(folder/'DONE.json',dict(passed=True,step=4830,identity=identity,final_sha=C.sha(final),selection_sha=C.sha(folder/'SELECTION.json'),final_reload_verified=True,early_stopping=False,time=C.utc()))
+            del ck,actual
+            # Only this completed run's rolling optimizer scratch; model candidates stay.
+            if (folder/'last.pt').exists():
+                C.append(folder/'retention.jsonl',dict(path=str(folder/'last.pt'),reason='fixed15 complete; selected and final models verified',time=C.utc()));(folder/'last.pt').unlink()
+            C.write(folder/'status.json',dict(state='completed',step=4830,epoch=15,time=C.utc()))
         dist.barrier();return 0
     except BaseException as exc:
         if isinstance(exc,A.ReplayFailure):checkpoint()

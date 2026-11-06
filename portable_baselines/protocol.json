@@ -1,5 +1,5 @@
 {
-  "name": "native-baselines-vast-init-5plus25",
+  "name": "native-baselines-vast-init-fixed15",
   "methods": [
     "vast",
     "gram",
@@ -10,10 +10,10 @@
   "global_batch": 256,
   "steps_per_epoch": 322,
   "warmup_epochs": 5,
-  "joint_epochs": 25,
-  "epochs": 30,
+  "joint_epochs": 10,
+  "epochs": 15,
   "warmup_steps": 1610,
-  "total_steps": 9660,
+  "total_steps": 4830,
   "initialization": {
     "all_methods": "same VAST checkpoint",
     "filename": "model_step_204994.pt",
@@ -98,13 +98,17 @@
       0,
       5,
       6,
+      7,
+      8,
+      9,
       10,
-      15,
-      20,
-      25,
-      30
+      11,
+      12,
+      13,
+      14,
+      15
     ],
-    "test_epoch": 30,
+    "test_epoch": null,
     "datasets": [
       "vast",
       "msrvtt",
@@ -112,7 +116,21 @@
       "activitynet",
       "didemo"
     ],
-    "task": "T<->VA; all fixed captions; native ITC score and ownTop32 pure ITM; no score fusion"
+    "task": "T<->VA; all fixed captions; native ITC score and ownTop32 pure ITM; no score fusion",
+    "selection_epochs": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "test_after_training_epoch": 15,
+    "primary_selection": "maximum validation ITM R1, then ITC R1, then earlier epoch; no test-based selection"
   },
   "checkpoints": {
     "warmup_head_epochs": [
@@ -124,14 +142,19 @@
     ],
     "joint_model_epochs": [
       6,
+      7,
+      8,
+      9,
       10,
-      15,
-      20,
-      25,
-      30
+      11,
+      12,
+      13,
+      14,
+      15
     ],
     "rolling_full_resume_every_epoch": true,
-    "best": "reference retained validation checkpoint; primary remains epoch30"
+    "best": "validation-selected joint model; fixed15 budget, no early stop",
+    "retention": "save every epoch; keep best ITM/ITC and latest; keep final15 after completion; all metrics retained"
   },
   "limitations": [
     "One seed; matched added steps are not identical FLOPs",
@@ -140,5 +163,9 @@
     "No native entailment-cone metric for these baselines",
     "Fixed audiovisual cohorts are not full paper benchmark protocols",
     "Exact cross-hardware bitwise reproducibility is not promised"
-  ]
+  ],
+  "early_stopping": false,
+  "parent_code_commit": "ca8a866c2a7d9a1f5eec43049ec1153e4a3cbdc2",
+  "learning_rate_policy": "unchanged prefix of original9660-step head/8050-step joint schedules; no peak-LR change or cosine compression",
+  "joint_steps": 3220
 }
